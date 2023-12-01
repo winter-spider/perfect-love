@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/colors.css" />
+    <link rel="stylesheet" href="./css/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Parisienne"
+    />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script src="./js/tailwind.js"></script>
+    <link rel="stylesheet" href="./te-starter/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com/3.2.4"></script>
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script>
+      ScrollReveal({ duration: 1800, reset: false });
+    </script>
+    <title>#perfectlove23</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>#perfectlove23 admin</title>
+  </head>
+
+  <body class="font-bold" style="background-color: rgb(0, 0, 0)">
+    <div
+      id="spinner"
+      style="
+        position: fixed;
+        width: 100%;
+        top: 50%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      "
+    >
+      <span
+        class="fa fa-spinner fa-spin gold-text"
+        style="font-size: 50px"
+      ></span>
+    </div>
+    <div>
+      <nav
+        class="w-full"
+        style="position: fixed; top: 0px; background-color: rgb(0, 0, 0)"
+      >
+        <div class="max-w-full px-2 flex">
+          <div class="flex h-24 items-center space-x-1">
+            <img
+              class="svg"
+              src="./images/J&K.png"
+              alt=""
+              style="width: 50px"
+            />
+            <p class="gold-text text-lg">#perfectlove23 Guest list</p>
+          </div>
+          <div
+            class="gap-2"
+            style="
+              flex-grow: 1;
+              display: flex;
+              justify-content: end;
+              padding: 16px;
+              align-items: center;
+              position: relative;
+            "
+          >
+            <button
+              style="
+                border: 1px solid rgb(250, 190, 79);
+                padding: 0px 8px;
+                border-radius: 2px;
+              "
+            >
+              <p id="filter" class="gold-text" style="font-size: 12px">
+                <span id="guest">All</span> - <span id="number">200</span>
+              </p>
+            </button>
+            <div
+              id="filter-options"
+              class="py-1 px-3"
+              style="
+                position: absolute;
+                background-color: rgb(20, 20, 20);
+                top: 60px;
+                width: 200px;
+                box-shadow: 1px 1px 10px black;
+                display: none;
+              "
+            >
+              <div class="gold-text text-sm py-2">
+                All - <span class="guest-title pointer">0</span> Guests
+              </div>
+              <hr style="border-color: black" />
+              <div class="gold-text text-sm py-2">
+                Pastors - <span class="guest-title pointer">0</span> Guests
+              </div>
+              <hr style="border-color: black" />
+              <div class="gold-text text-sm py-2">
+                Doctors - <span class="guest-title pointer">0</span> Guests
+              </div>
+              <hr style="border-color: black" />
+              <div class="gold-text text-sm py-2">
+                Barristers - <span class="guest-title pointer">0</span> Guests
+              </div>
+              <hr style="border-color: black" />
+              <div class="gold-text text-sm py-2">
+                Mr - <span class="guest-title pointer">0</span> Guests
+              </div>
+              <hr style="border-color: black" />
+              <div class="gold-text text-sm py-2">
+                Miss - <span class="guest-title pointer">0</span> Guests
+              </div>
+              <hr style="border-color: black" />
+              <div class="gold-text text-sm py-2">
+                Mrs - <span class="guest-title pointer">0</span> Guests
+              </div>
+              <hr style="border-color: black" />
+              <div class="gold-text text-sm py-2">
+                Bro - <span class="guest-title pointer">0</span> Guests
+              </div>
+              <hr style="border-color: black" />
+              <div class="gold-text text-sm py-2">
+                Sis - <span class="guest-title pointer">0</span> Guests
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="table-container" class="mt-24 mb-10" style="display: none">
+        <table class="w3-table w3-striped">
+          <tbody id="table"></tbody>
+        </table>
+        <div
+          class="mt-10"
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <button
+            class="p-2 rounded w-64 font-bold gold-text ring-1 ring-[#fbc050]"
+          >
+            <span id="load-more" class="text-lg">Load More</span>
+
+            <span id="load-more-spinner" class="fa fa-spinner fa-spin text-lg" style="display: none;"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="guest-modal"
+      class="w3-modal w3-animate-opacity"
+      style="display: none"
+    >
+      <div class="w3-modal-content gold-text">
+        <div
+          id="guest-modal-container"
+          class="p-2"
+          style="background-color: rgb(20, 20, 20)"
+        ></div>
+      </div>
+    </div>
+
+    <script src="./js/admin.js"></script>
+  </body>
+</html>

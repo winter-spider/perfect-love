@@ -1,0 +1,25 @@
+.primary {
+    background-color: rgb(19, 82, 55);
+}
+.primary-2 {
+    background-color: rgb(19, 82, 55);
+}
+.gold {
+    background-color: rgb(250, 190, 79);
+}
+.gold-2 {
+    background-color: rgb(134, 101, 39);
+}
+.green-text {
+    color: rgb(19, 82, 55);
+}
+.gold-text {
+    color: rgb(251, 192, 80);
+}
+
+.gold-text-2 {
+    color: rgb(184, 133, 38);
+}
+.pointer:hover {
+    cursor: pointer;
+}
